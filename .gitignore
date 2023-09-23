@@ -1,1 +1,9 @@
 .env
+
+.metals/
+project/metals.sbt
+project/project
+.vscode/
+
+# bsp
+.bsp
