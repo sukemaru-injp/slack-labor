@@ -1,23 +1,29 @@
-import utils.ArrayElement
 import com.slack.api.bolt.App
 import com.slack.api.bolt.socket_mode.SocketModeApp
 import controller.HelloController
+import scala.collection.mutable.ArrayBuffer
 
-class Point(val x: Int, val y: Int)
-trait Rectangular {
-  def topLeft: Point;
-  def bottomRight: Point;
+abstract class IntQueue {
+  def get(): Int
+  def put(x: Int): Unit
+  def print(): Unit
+}
+class BasicIntQueue extends IntQueue {
+  private val buf = new ArrayBuffer[Int]
+  def get() = buf.remove(0)
+  def put(x: Int) = { buf += x }
 
-  def left = topLeft.x
-  def right = bottomRight.y
+  def print() = println(this.buf)
 }
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val el = new ArrayElement(Array("Hello", "World"))
-    val el2 = el.beside(new ArrayElement(Array("Hello", "Scala")))
+    val test = new BasicIntQueue()
+    test.put(1)
+    test.put(2)
+    test.put(3)
 
-    el2.contents.foreach(println(_))
+    test.print()
 
     println("Hello world!")
 

@@ -1,25 +1,25 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/slack-labor_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/slack-labor_2.13-0.1.0-SNAPSHOT.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	utils[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/utils[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/utils[0m
 [0m[[0m[0mdebug[0m] [0m[0m	utils/Element.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/utils/Element.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/utils/Element.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	utils/ArrayElement.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/utils/ArrayElement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/utils/ArrayElement.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	IntQueue.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/IntQueue.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	controller[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/controller[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/controller[0m
 [0m[[0m[0mdebug[0m] [0m[0m	controller/BotController.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/controller/BotController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/controller/BotController.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	controller/HelloController$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/controller/HelloController$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/controller/HelloController$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	controller/HelloController.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/controller/HelloController.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Point.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/Point.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Rectangular.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/Rectangular.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/controller/HelloController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BasicIntQueue.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/BasicIntQueue.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/practice/slack-labor/target/scala-2.13/classes/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/ryosukekubota/projects/slack-labor/target/scala-2.13/classes/Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
