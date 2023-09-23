@@ -1,9 +1,11 @@
 .env
 
+.idea/
+target/
+
 .metals/
 project/metals.sbt
 project/project
 .vscode/
 
-# bsp
 .bsp
