@@ -4,6 +4,10 @@ import com.slack.api.bolt.handler.builtin.SlashCommandHandler
 
 object HelloController extends BotController {
   def handler: SlashCommandHandler = (req, ctx) => {
-    ctx.ack("Ok")
+    val ctxClient = ctx.client()
+    val triggerId = ctx.getTriggerId
+
+    println(triggerId)
+    ctx.ack(":wave: pong")
   }
 }
