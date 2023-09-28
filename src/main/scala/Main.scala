@@ -1,6 +1,7 @@
 import com.slack.api.bolt.App
 import com.slack.api.bolt.socket_mode.SocketModeApp
 import controller.HelloController
+import controller.DiaryController
 import utils.BasicIntQueue
 import routes.Command
 
@@ -17,7 +18,9 @@ object Main {
     println("Hello world!")
 
     val app = new App()
+
     app.command(Command.hello, HelloController.handler)
+    app.command(Command.diary, DiaryController.handler)
 
     new SocketModeApp(app).start()
   }
