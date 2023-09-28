@@ -10,12 +10,17 @@ abstract class SlackModal {
   val triggerId: String
 }
 class LaborModal(val triggerId: String) extends SlackModal {
-  def build() = {
+  def build(): View = {
     view(
       _.callbackId("labor-diary")
         .`type`("modal")
         .notifyOnClose(true)
-        .title(
-          viewTitle(_.`type`("plain_text").text("HelloLabor").emoji(true))))
+        .title(viewTitle(_.`type`("plain_text").text("HelloLabor").emoji(true)))
+        .submit(viewSubmit(_.`type`("plain_text").text("Submit").emoji(true)))
+        .close(viewClose(_.`type`("plain_text").text("Close")))
+        .blocks(asBlocks(input(_.blockId("memo")
+          .element(plainTextInput(_.actionId("agenda-action").multiline(true)))
+          .label(plainText("メモ")))))
+    )
   }
 }
