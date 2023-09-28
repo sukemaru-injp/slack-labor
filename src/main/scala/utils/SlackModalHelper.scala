@@ -7,6 +7,6 @@ import com.slack.api.model.view.View
 
 class SlackModalHelper(val triggerId: String, val view: View)
   extends SlackModal {
-  val open: RequestConfigurator[ViewsOpenRequest.ViewsOpenRequestBuilder] =
+  def open: RequestConfigurator[ViewsOpenRequest.ViewsOpenRequestBuilder] =
     (req) => req.triggerId(this.triggerId).view(this.view)
 }

@@ -13,9 +13,8 @@ object HelloController extends BotController {
 
     val modal = new LaborModal(triggerId).build()
 
-    val result =
-      ctx.client().viewsOpen(new SlackModalHelper(triggerId, modal).open);
-    if (result.isOk) ctx.ack(":wave:やったぜ")
+    val result = ctxClient.viewsOpen(new SlackModalHelper(triggerId, modal).open);
+
     println("fireeee", payload)
 
     ctx.ack(":wave: pong")
