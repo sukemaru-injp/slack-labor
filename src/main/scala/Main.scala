@@ -4,6 +4,7 @@ import controller.HelloController
 import controller.DiaryController
 import utils.BasicIntQueue
 import routes.Command
+import utils.slack.CallbackIds
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -21,6 +22,8 @@ object Main {
 
     app.command(Command.hello, HelloController.handler)
     app.command(Command.diary, DiaryController.handler)
+
+    app.viewSubmission(CallbackIds.laborDiary, DiaryController.submissionHandler)
 
     new SocketModeApp(app).start()
   }

@@ -3,17 +3,18 @@ package controller
 import com.slack.api.RequestConfigurator
 import com.slack.api.bolt.handler.builtin.SlashCommandHandler
 
-import utils.LaborModal
-import utils.SlackModalHelper
+import utils.slack.{DiaryModal, SlackModalHelper}
+
 object HelloController extends BotController {
   def handler: SlashCommandHandler = (req, ctx) => {
     val ctxClient = ctx.client()
     val triggerId = ctx.getTriggerId
     val payload = req.getPayload
 
-    val modal = new LaborModal(triggerId).build()
+    val modal = new DiaryModal(triggerId).build()
 
-    val result = ctxClient.viewsOpen(new SlackModalHelper(triggerId, modal).open);
+    val result =
+      ctxClient.viewsOpen(new SlackModalHelper(triggerId, modal).open);
 
     println("fireeee", payload)
 
