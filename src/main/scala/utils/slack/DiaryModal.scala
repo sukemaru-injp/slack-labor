@@ -7,6 +7,9 @@ import com.slack.api.model.view.View
 import com.slack.api.model.view.Views.{view, viewClose, viewSubmit, viewTitle}
 import routes.BlockActions
 
+object DiaryModalBlocks {
+  val memo = "memo"
+}
 class DiaryModal(val triggerId: String) extends SlackModal {
   def build(): View = {
     view(
@@ -16,7 +19,7 @@ class DiaryModal(val triggerId: String) extends SlackModal {
         .title(viewTitle(_.`type`("plain_text").text("HelloLabor").emoji(true)))
         .submit(viewSubmit(_.`type`("plain_text").text("Submit").emoji(true)))
         .close(viewClose(_.`type`("plain_text").text("Close")))
-        .blocks(asBlocks(input(_.blockId("memo")
+        .blocks(asBlocks(input(_.blockId(DiaryModalBlocks.memo)
           .element(plainTextInput(_.actionId(BlockActions.laborMemoActionId).multiline(true)))
           .label(plainText("メモ")))))
     )

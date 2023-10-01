@@ -2,21 +2,17 @@ import com.slack.api.bolt.App
 import com.slack.api.bolt.socket_mode.SocketModeApp
 import controller.HelloController
 import controller.DiaryController
-import utils.BasicIntQueue
 import routes.Command
 import utils.slack.CallbackIds
+import utils.{CheckExpr}
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val test = new BasicIntQueue()
-
-    test.put(1)
-    test.put(2)
-    test.put(3)
-
-    test.print()
 
     println("Hello world!")
+
+    println(CheckExpr.listMatch(List(0, 1, 2)))
+    println(CheckExpr.listMatch(List("0", "1", "2")))
 
     val app = new App()
 

@@ -7,17 +7,10 @@ import utils.slack.{DiaryModal, SlackModalHelper}
 
 object HelloController extends BotController {
   def handler: SlashCommandHandler = (req, ctx) => {
-    val ctxClient = ctx.client()
-    val triggerId = ctx.getTriggerId
     val payload = req.getPayload
-
-    val modal = new DiaryModal(triggerId).build()
-
-    val result =
-      ctxClient.viewsOpen(new SlackModalHelper(triggerId, modal).open);
 
     println("fireeee", payload)
 
-    ctx.ack(":wave: pong")
+    ctx.ack("Hello,SlackLabor:wave:")
   }
 }
