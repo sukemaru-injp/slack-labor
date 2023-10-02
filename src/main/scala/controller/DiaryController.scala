@@ -18,7 +18,8 @@ object DiaryController extends BotController {
   }
 
   def submissionHandler: ViewSubmissionHandler = (req, ctx) => {
-    println("fireeeee", req.getPayload)
+    val stateValues = req.getPayload.getView.getState.getValues
+    println("fireeeee", stateValues)
     ctx.ack()
   }
 }
