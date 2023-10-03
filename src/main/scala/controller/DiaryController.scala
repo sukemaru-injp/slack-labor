@@ -2,7 +2,8 @@ package controller
 import com.slack.api.bolt.handler.builtin.SlashCommandHandler
 import com.slack.api.bolt.handler.builtin.ViewSubmissionHandler
 import utils.slack.{DiaryModal, SlackModalHelper}
-
+import com.slack.api.bolt.request.builtin.ViewSubmissionRequest
+import models.diary.DiaryFactory
 object DiaryController extends BotController {
   def handler: SlashCommandHandler = (req, ctx) => {
     val ctxClient = ctx.client()
@@ -18,8 +19,7 @@ object DiaryController extends BotController {
   }
 
   def submissionHandler: ViewSubmissionHandler = (req, ctx) => {
-    val stateValues = req.getPayload.getView.getState.getValues
-    println("fireeeee", stateValues)
+    DiaryFactory.create(req)
     ctx.ack()
   }
 }

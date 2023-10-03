@@ -6,7 +6,6 @@ import com.slack.api.model.block.element.BlockElements.{
   plainTextInput,
   timePicker
 }
-import com.slack.api.model.block.element.TimePickerElement
 import com.slack.api.model.view.View
 import com.slack.api.model.view.Views.{view, viewClose, viewSubmit, viewTitle}
 import routes.BlockActions

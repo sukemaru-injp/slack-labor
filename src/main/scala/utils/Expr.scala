@@ -13,11 +13,12 @@ object CheckExpr {
     case _ => s"$expr"
   }
 
-  def listMatch[T](li: List[T]) = li match {
+  def listMatch[T](li: List[T]): String = li match {
     case List(0, _*) => "is Zero Start"
     case _ => "is not Zero start"
   }
-  def isStringArray(arr: Any) = arr match {
+
+  def isStringArray(arr: Any): Boolean = arr match {
     case a: Array[String] => true
     case _ => false
   }

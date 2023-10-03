@@ -4,15 +4,10 @@ import controller.HelloController
 import controller.DiaryController
 import routes.Command
 import utils.slack.CallbackIds
-import utils.{CheckExpr}
 
 object Main {
   def main(args: Array[String]): Unit = {
-
-    println("Hello world!")
-
-    println(CheckExpr.listMatch(List(0, 1, 2)))
-    println(CheckExpr.listMatch(List("0", "1", "2")))
+    println("App Start")
 
     val app = new App()
 
