@@ -4,13 +4,15 @@ import com.slack.api.model.block.Blocks.{asBlocks, input}
 import com.slack.api.model.block.composition.BlockCompositions.plainText
 import com.slack.api.model.block.element.BlockElements.{
   plainTextInput,
-  timePicker
+  timePicker,
+  datePicker
 }
 import com.slack.api.model.view.View
 import com.slack.api.model.view.Views.{view, viewClose, viewSubmit, viewTitle}
 import routes.BlockActions
 
 object DiaryModalBlockId {
+  val selectDate = "select_date"
   val startDateTime = "start_datetime"
   val endDateTime = "end_datetime"
   val memo = "memo"
@@ -26,6 +28,10 @@ class DiaryModal(val triggerId: String) extends SlackModal {
         .submit(viewSubmit(_.`type`("plain_text").text("Submit").emoji(true)))
         .close(viewClose(_.`type`("plain_text").text("Close")))
         .blocks(asBlocks(
+          input(
+            _.blockId(DiaryModalBlockId.selectDate)
+              .element(datePicker(_.actionId(BlockActions.laborSelectDate)))
+              .label(plainText("日付"))),
           input(
             _.blockId(DiaryModalBlockId.startDateTime)
               .element(timePicker(_.actionId(BlockActions.laborStartDateTime)
