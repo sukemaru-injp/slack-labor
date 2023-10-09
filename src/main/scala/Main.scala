@@ -11,9 +11,11 @@ object Main {
 
     val app = new App()
 
+    // slush command
     app.command(Command.hello, HelloController.handler)
     app.command(Command.diary, DiaryController.handler)
 
+    // modal submitted
     app.viewSubmission(CallbackIds.laborDiary, DiaryController.submissionHandler)
 
     new SocketModeApp(app).start()

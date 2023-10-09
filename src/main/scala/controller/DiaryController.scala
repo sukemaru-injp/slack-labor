@@ -5,6 +5,7 @@ import utils.slack.{DiaryModal, SlackModalHelper}
 import com.slack.api.bolt.request.builtin.ViewSubmissionRequest
 import models.diary.DiaryFactory
 object DiaryController extends BotController {
+  private val diaryFactory = new DiaryFactory()
   def handler: SlashCommandHandler = (req, ctx) => {
     val ctxClient = ctx.client()
     val triggerId = ctx.getTriggerId
@@ -19,7 +20,7 @@ object DiaryController extends BotController {
   }
 
   def submissionHandler: ViewSubmissionHandler = (req, ctx) => {
-    DiaryFactory.create(req)
+    diaryFactory.create(req)
     ctx.ack()
   }
 }
