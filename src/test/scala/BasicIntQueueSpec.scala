@@ -7,7 +7,7 @@ class BasicIntQueueSpec extends AsyncFunSuite {
     test.put(1)
     test.put(2)
     test.put(3)
-
+    
     assert(test.get() === 1)
   }
 }
