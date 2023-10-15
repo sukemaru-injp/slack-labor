@@ -17,8 +17,10 @@ object DiaryModalBlockId {
   val endDateTime = "end_datetime"
   val memo = "memo"
 }
-
-class DiaryModal(val triggerId: String) extends SlackModal {
+trait IDiaryModal {
+  val triggerId: String
+}
+class DiaryModal(val triggerId: String) extends IDiaryModal {
   def build(): View = {
     view(
       _.callbackId(CallbackIds.laborDiary)

@@ -1,7 +1,8 @@
 package controller
 import com.slack.api.bolt.handler.builtin.SlashCommandHandler
 import com.slack.api.bolt.handler.builtin.ViewSubmissionHandler
-import utils.slack.{DiaryModal, SlackModalHelper}
+import utils.slack.DiaryModal
+import models.modal.ModalFactory
 import models.diary.DiaryFactory
 
 object DiaryController extends BotController {
@@ -13,7 +14,7 @@ object DiaryController extends BotController {
     val modal = new DiaryModal(triggerId).build()
 
     val result =
-      ctxClient.viewsOpen(new SlackModalHelper(triggerId, modal).open);
+      ctxClient.viewsOpen(new ModalFactory(triggerId).create(modal));
 
     ctx.ack("success :wave:")
   }
