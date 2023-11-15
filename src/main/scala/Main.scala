@@ -16,7 +16,8 @@ object Main {
     app.command(Command.diary, DiaryController.handler)
 
     // modal submitted
-    app.viewSubmission(CallbackIds.laborDiary, DiaryController.submissionHandler)
+    app.viewSubmission(CallbackIds.laborDiary,
+                       DiaryController.submissionHandler)
 
     new SocketModeApp(app).start()
   }
